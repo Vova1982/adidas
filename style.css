@@ -67,19 +67,112 @@ header {
 .cart {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
     background: var(--bg-color);
     box-shadow: -15px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
 }
+
+/* vinesli cart za predeli vidimosti VAGNO  */
+.cart.active {
+    right: 0;
+}
+
 
 .cart_title {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 3px;
+}
+
+.cart_box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.detail_box {
+    display: grid;
+    row-gap: 0.5ren;
+}
+
+.cart_product_title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart_price {
+    font-weight: 500;
+}
+
+.cart_quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart_remove {
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+.total_title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total_price {
+    margin-left: 0.5rem;
+}
+
+.btn_buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.btn_buy:hover {
+    background: var(--text-color);
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+
+}
+
+.cart_img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 10%;
 }
 
 .section_title {
